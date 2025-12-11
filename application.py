@@ -28,7 +28,7 @@ application.config["JWT_SECRET_KEY"] = SECRET_KEY
 jwt = JWTManager(application)
 
 # Connect to DynamoDB
-dynamodb = boto3.resource("dynamodb", region_name=AWS_REGION, aws_access_key_id=AWS_ACCESS_KEY, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+dynamodb = boto3.resource("dynamodb", region_name=AWS_REGION)
 plc_data_table = dynamodb.Table(DATA_TABLE)
 users_table = dynamodb.Table(USERS_TABLE)
 
@@ -446,3 +446,4 @@ if __name__ == "__main__":
 
 
     
+
