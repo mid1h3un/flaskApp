@@ -22,8 +22,7 @@ SECRET_KEY = "your_secret_key"
 AWS_REGION = "us-east-1"
 DATA_TABLE = "Data"
 USERS_TABLE = "Users"
-AWS_ACCESS_KEY="AKIAY7MGW5IH3OK3PDVL"
-AWS_SECRET_ACCESS_KEY="LuDel0m+pr2eM7x5E2AYN7YatcDVe7wFX5bwM6tm"
+
 # Secret key for JWT
 application.config["JWT_SECRET_KEY"] = SECRET_KEY
 jwt = JWTManager(application)
@@ -444,5 +443,6 @@ def protected():
 
 if __name__ == "__main__":
     application.run(debug=True)
+
 
     
